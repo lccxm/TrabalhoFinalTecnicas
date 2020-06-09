@@ -1,0 +1,11 @@
+Livraria online:
+
+Este trabalho tem como objetivo desenvolver um sistema web que gerencia uma livraria.
+
+funcionalidades: 
+- Cadastro
+- Login 
+- Compra de livros
+- Visualização de livros disponíveis 
+- Visualização de livros comprados 
+- Filtro dos livros por categoria
