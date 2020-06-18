@@ -11,7 +11,7 @@ public class Pedido {
         this.cliente = cliente;
     }
 
-    private double getSubTotal(){
+    public double getSubTotal(){
         double total = 0.00;
         for (Livro l: livros) {
             total+=livro.getPreco();
@@ -31,5 +31,11 @@ public class Pedido {
     public Cliente getCliente() {
         return this.cliente;
     }
+
+
+    public ArrayList<Livro> getLivros() {
+        return this.livros;
+    }
+
 
 }

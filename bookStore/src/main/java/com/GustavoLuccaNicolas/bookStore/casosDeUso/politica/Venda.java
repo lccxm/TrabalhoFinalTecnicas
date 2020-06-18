@@ -3,23 +3,22 @@ package com.GustavoLuccaNicolas.bookStore.casosDeUso.politica;
 import com.GustavoLuccaNicolas.bookStore.entidades.Pedido;
 
 public class Venda {
-    private String cupom;
+    private String cupomStr;
     private Pedido pedido;
-    private Long id;
-    private Double subTotal;
-    private Double valorFinal;
 
 
-    public Venda(String cupom, Pedido pedido, Double subTotal, Double valorFinal) {
-        this.cupom = cupom;
+
+    public Venda(String cupomStr, Pedido pedido) {
+        this.cupomStr = cupomStr;
         this.pedido = pedido;
-        this.id = id;
-        this.subTotal = subTotal;
-        this.valorFinal = valorFinal;
     }
 
     public String getCupom() {
         return this.cupom;
+    }
+
+    public double getDesconto(){
+        return CupomFactory.getCupom(cupomStr).getDesconto();
     }
 
     public Double getFrete() {
@@ -30,12 +29,9 @@ public class Venda {
         return this.pedido;
     }
 
-    public Long getId() {
-        return this.id;
-    }
 
     public Double getSubTotal() {
-        return this.subTotal;
+        return pedido.getSubTotal();
     }
 
     public Double getValorFinal() {
