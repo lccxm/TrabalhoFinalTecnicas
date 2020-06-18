@@ -16,7 +16,6 @@ public class Cliente {
         this.uf = uf;
     }
 
-
     public String getCpf() {
         return this.cpf;
     }
@@ -36,5 +35,4 @@ public class Cliente {
     public String getUf() {
         return this.uf;
     }
-
 }

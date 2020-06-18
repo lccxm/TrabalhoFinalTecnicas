@@ -1,5 +1,5 @@
-import java.util.ArrayList;
 package entidades;
+import java.util.ArrayList;
 
 public class Pedido {
     private ArrayList<Livro> livros;
@@ -11,9 +11,10 @@ public class Pedido {
     }
 
     private double getSubTotal(){
-        double total = 0;
+        double total = 0.00;
         for (Livro l: livros) {
             total+=livro.getPreco();
+        return total;
         }
     }
 
