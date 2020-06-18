@@ -8,13 +8,15 @@ public class Livro{
     private String descricao;
     private boolean disponivel;
     private long id;
+    private Genero genero;
 
-    public Livro(double preco, String autor, String titulo, String descricao, long id){
+    public Livro(double preco, String autor, String titulo, String descricao, long id, Genero genero){
         this.preco = preco;
         this.autor = autor;
         this.titulo = titulo;
         this.descricao = descricao;
         this.id = id;
+        this.genero = genero;
         disponivel = true;
     }
 
@@ -40,6 +42,10 @@ public class Livro{
 
     public boolean isDisponivel(){
         return disponivel;
+    }
+
+    public Genero getGenero(){
+        return genero;
     }
 
     public void setDisponivel(boolean b){
