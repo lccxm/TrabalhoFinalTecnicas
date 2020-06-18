@@ -8,6 +8,7 @@ public class Pedido {
     private Livro livro;
     public Pedido(Cliente cliente, ArrayList<Livro> livros) {
         this.livros = livros;
+        this.cliente = cliente;
     }
 
     private double getSubTotal(){
@@ -25,4 +26,10 @@ public class Pedido {
     public ArrayList<Livro> getPedidoCliente(Cliente c){
         return livros;
     }
+
+
+    public Cliente getCliente() {
+        return this.cliente;
+    }
+
 }
