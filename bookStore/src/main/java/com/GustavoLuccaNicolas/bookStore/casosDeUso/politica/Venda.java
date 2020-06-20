@@ -13,12 +13,9 @@ public class Venda {
         this.pedido = pedido;
     }
 
-    public String getCupom() {
-        return this.cupom;
-    }
 
     public double getDesconto(){
-        return CupomFactory.getCupom(cupomStr).getDesconto();
+        return CupomFactory.getCupom(cupomStr, this).getDesconto();
     }
 
     public Double getFrete() {
@@ -35,7 +32,7 @@ public class Venda {
     }
 
     public Double getValorFinal() {
-        return this.valorFinal;
+        return this.getSubTotal() - this.getDesconto() + this.getFrete();
     }
 
 }

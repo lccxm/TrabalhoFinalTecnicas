@@ -6,8 +6,8 @@ import com.GustavoLuccaNicolas.bookStore.entidades.Livro;
 public class CupomRomance extends Cupom {
     private final double DESCONTO = 0.10;
 
-    public CupomRomance(String cupomStr, Venda venda){
-        super(cupomStr, venda);
+    public CupomRomance(Venda venda){
+        super(venda);
     }
 
     @Override

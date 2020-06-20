@@ -1,11 +1,13 @@
+package com.GustavoLuccaNicolas.bookStore.casosDeUso.politica;
+
 import com.GustavoLuccaNicolas.bookStore.entidades.Genero;
 import com.GustavoLuccaNicolas.bookStore.entidades.Livro;
 
 public class CupomQuantidade extends Cupom {
     private final double DESCONTO = 0.15;
 
-    public CupomQuantidade(String cupomStr, Venda venda){
-        super(cupomStr, venda);
+    public CupomQuantidade(Venda venda){
+        super(venda);
     }
 
     @Override
