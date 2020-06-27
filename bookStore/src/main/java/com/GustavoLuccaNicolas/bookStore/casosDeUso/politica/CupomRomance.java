@@ -13,7 +13,7 @@ public class CupomRomance extends Cupom {
     @Override
     public double getDesconto(){
         Double desconto = 0.0;
-        for (Livro livro: venda.getPedido().getLivros())
+        for (Livro livro: venda.getLivros())
             if (livro.getGenero().equals(Genero.Romance))
                 desconto += livro.getPreco()*DESCONTO;
         return desconto;
