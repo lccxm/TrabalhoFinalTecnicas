@@ -12,8 +12,8 @@ public class CupomQuantidade extends Cupom {
 
     @Override
     public double getDesconto(){
-        if (venda.getPedido().getLivros().size()>=3)
-            return venda.getPedido().getSubTotal() * DESCONTO;
+        if (venda.getLivros().size()>=3)
+            return venda.getSubTotal() * DESCONTO;
         else 
             throw new IllegalArgumentException("Voce precisa ter pelo menos 3 itens em seu carrinho para ativar este desconto.");
     }
