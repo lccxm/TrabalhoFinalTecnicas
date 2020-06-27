@@ -9,6 +9,7 @@ public class Livro{
     private boolean disponivel;
     private long id;
     private Genero genero;
+    private int nVendas
 
     public Livro(double preco, String autor, String titulo, String descricao, long id, Genero genero){
         this.preco = preco;
@@ -18,6 +19,7 @@ public class Livro{
         this.id = id;
         this.genero = genero;
         disponivel = true;
+        nVendas = 0;
     }
 
     public double getPreco(){
@@ -54,6 +56,13 @@ public class Livro{
 
     public void setPreco(double p){
         preco = p;
+    }
+
+    public int getnVendas(){
+        return nVendas;
+    }
+    public void vender(){
+        nVendas++;
     }
 
 }
