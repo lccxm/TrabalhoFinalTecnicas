@@ -1,6 +1,10 @@
 package com.GustavoLuccaNicolas.bookStore.entidades;
 
-public class Livro{
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Livro {
 
     private double preco;
     private String autor;
@@ -21,6 +25,10 @@ public class Livro{
         disponivel = true;
         nVendas = 0;
     }
+
+    public int getnVendas(){ return nVendas; }
+
+    public void vender(){ nVendas++; }
 
     public double getPreco(){
         return preco;
