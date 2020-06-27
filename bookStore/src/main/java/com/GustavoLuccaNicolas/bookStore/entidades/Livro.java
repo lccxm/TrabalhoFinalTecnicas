@@ -58,11 +58,14 @@ public class Livro{
         preco = p;
     }
 
-    public int getnVendas(){
-        return nVendas;
-    }
     public void vender(){
         nVendas++;
     }
+
+    public int getnVendas(){
+        return nVendas;
+    }
+
+    
 
 }
