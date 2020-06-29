@@ -1,6 +1,6 @@
 package com.GustavoLuccaNicolas.bookStore.casosDeUso.politica;
 
-public class CupomFactory {
+class CupomFactory {
     public static Cupom getCupom(String cupomStr, Venda venda) {
         switch(cupomStr){
             case "romance10": return new CupomRomance(venda);

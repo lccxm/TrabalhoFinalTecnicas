@@ -13,7 +13,7 @@ public class Livro {
     private boolean disponivel;
     private long id;
     private Genero genero;
-    private int nVendas
+    private int nVendas;
 
     public Livro(double preco, String autor, String titulo, String descricao, long id, Genero genero){
         this.preco = preco;
@@ -26,9 +26,13 @@ public class Livro {
         nVendas = 0;
     }
 
-    public int getnVendas(){ return nVendas; }
+    public int getnVendas(){
+        return nVendas;
+    }
 
-    public void vender(){ nVendas++; }
+    public void vender(){
+        nVendas++;
+    }
 
     public double getPreco(){
         return preco;
@@ -66,14 +70,5 @@ public class Livro {
         preco = p;
     }
 
-    public void vender(){
-        nVendas++;
-    }
-
-    public int getnVendas(){
-        return nVendas;
-    }
-
-    
 
 }

@@ -3,7 +3,7 @@ package com.GustavoLuccaNicolas.bookStore.casosDeUso.servicos;
 import com.GustavoLuccaNicolas.bookStore.entidades.Genero;
 import com.GustavoLuccaNicolas.bookStore.entidades.Livro;
 import com.GustavoLuccaNicolas.bookStore.interfaceRemota.RepositorioLivrosImpl;
-import com.GustavoLuccaNicolas.bookStore.interfaceRemota.RepositorioVendasImpl
+import com.GustavoLuccaNicolas.bookStore.interfaceRemota.RepositorioVendasImpl;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,7 +23,7 @@ class ServicosPagina {
 
     public ArrayList<Livro> pesquisaPorTitulo(String titulo){
         List<Livro> livros = rLivros.findAll();
-        List<Livro> livrosEncontrados = new ArrayList<Livro>;
+        ArrayList<Livro> livrosEncontrados = new ArrayList<Livro>();
         for(Livro l : livros){
             if(titulo.equalsIgnoreCase(l.getTitulo())){
                 livrosEncontrados.add(l);
@@ -33,8 +33,8 @@ class ServicosPagina {
     }
 
     public ArrayList<Livro> pesquisaPorGenero(Genero genero){
-        ArrayList<Livro> livros = rLivros.findAll();
-        ArrayList<Livro> livrosEncontrados = new ArrayList<Livro>;
+        ArrayList<Livro> livros = (ArrayList<Livro>) rLivros.findAll();
+        ArrayList<Livro> livrosEncontrados = new ArrayList<Livro>();
         for(Livro l : livros){
             if(genero == l.getGenero()){
                 livrosEncontrados.add(l);
