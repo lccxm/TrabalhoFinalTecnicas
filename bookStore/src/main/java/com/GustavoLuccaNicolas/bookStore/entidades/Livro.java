@@ -1,20 +1,28 @@
 package com.GustavoLuccaNicolas.bookStore.entidades;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
+@Entity
 public class Livro {
-
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private long id;
     private double preco;
     private String autor;
     private String titulo;
     private String descricao;
     private boolean disponivel;
-    private long id;
     private Genero genero;
     private int nVendas;
 
+    protected Livro(){}
+    
     public Livro(double preco, String autor, String titulo, String descricao, long id, Genero genero){
         this.preco = preco;
         this.autor = autor;
