@@ -16,7 +16,10 @@ import com.GustavoLuccaNicolas.bookStore.entidades.Livro;
 import com.GustavoLuccaNicolas.bookStore.interfaceRemota.RepositorioClientesImpl;
 import com.GustavoLuccaNicolas.bookStore.interfaceRemota.RepositorioLivrosImpl;
 import com.GustavoLuccaNicolas.bookStore.interfaceRemota.RepositorioVendasImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ServicosCliente {
 
     private RepositorioClientesImpl rClientes;
@@ -25,7 +28,7 @@ public class ServicosCliente {
     private ServicosPagina serv;
     
 
-
+    @Autowired
     public ServicosCliente(RepositorioClientesImpl rClientes, RepositorioVendasImpl rVendas, RepositorioLivrosImpl rLivros, ServicosPagina serv){
         this.rClientes = rClientes;
         this.rLivros = rLivros;
