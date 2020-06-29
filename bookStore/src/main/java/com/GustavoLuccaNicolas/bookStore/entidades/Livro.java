@@ -22,7 +22,7 @@ public class Livro {
     private int nVendas;
 
     protected Livro(){}
-    
+
     public Livro(double preco, String autor, String titulo, String descricao, long id, Genero genero){
         this.preco = preco;
         this.autor = autor;

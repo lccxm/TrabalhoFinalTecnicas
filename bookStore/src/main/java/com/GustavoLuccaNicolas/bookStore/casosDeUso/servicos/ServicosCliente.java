@@ -29,11 +29,11 @@ public class ServicosCliente {
     
 
     @Autowired
-    public ServicosCliente(RepositorioClientesImpl rClientes, RepositorioVendasImpl rVendas, RepositorioLivrosImpl rLivros){
+    public ServicosCliente(RepositorioClientesImpl rClientes, RepositorioVendasImpl rVendas, RepositorioLivrosImpl rLivros, ServicosPagina serv){
         this.rClientes = rClientes;
         this.rLivros = rLivros;
         this.rVendas = rVendas;
-        this.serv = new ServicosPagina(rVendas, rLivros);
+        this.serv = serv;
     }
 
     public Cliente recuperarDadosCliente(Long cpf){
@@ -62,7 +62,6 @@ public class ServicosCliente {
         Genero finalFavorito = favorito;
         return bestSellers.stream().filter(livro -> livro.getGenero() == finalFavorito).collect(Collectors.toList());
     }
-
 
     public Venda criaVenda(Cliente cliente){
         return new Venda(cliente);

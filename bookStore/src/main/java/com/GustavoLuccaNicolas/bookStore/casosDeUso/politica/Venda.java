@@ -2,15 +2,18 @@ package com.GustavoLuccaNicolas.bookStore.casosDeUso.politica;
 
 import com.GustavoLuccaNicolas.bookStore.entidades.Cliente;
 import com.GustavoLuccaNicolas.bookStore.entidades.Livro;
+
 import java.util.LinkedList;
 import java.util.List;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Venda {
     private String cupomStr;
     private Cliente cliente;
     private List<Livro> livros;
 
-
+    protected Venda(){}
 
     public Venda(Cliente cliente) {
         this.cliente = cliente;

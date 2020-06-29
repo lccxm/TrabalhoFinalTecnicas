@@ -27,7 +27,7 @@ public class ServicosPagina {
 
     public List<Livro> pesquisaPorTitulo(String titulo){
         List<Livro> livros = rLivros.findAll();
-        List<Livro> livrosEncontrados = new ArrayList<Livro>;
+        List<Livro> livrosEncontrados = new ArrayList<>();
         for(Livro l : livros){
             if(titulo.equalsIgnoreCase(l.getTitulo())){
                 livrosEncontrados.add(l);
