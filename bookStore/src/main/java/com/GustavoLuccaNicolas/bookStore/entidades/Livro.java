@@ -13,7 +13,7 @@ public class Livro {
     private boolean disponivel;
     private long id;
     private Genero genero;
-    private int nVendas
+    private int nVendas;
 
     public Livro(double preco, String autor, String titulo, String descricao, long id, Genero genero){
         this.preco = preco;
