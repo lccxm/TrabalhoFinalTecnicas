@@ -40,6 +40,7 @@ public class Venda {
         return total;
     }
 
+
     public Double getValorFinal() {
         return this.getSubTotal() - this.getDesconto() + this.getFrete();
     }
