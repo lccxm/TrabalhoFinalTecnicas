@@ -3,7 +3,7 @@ package com.GustavoLuccaNicolas.bookStore.casosDeUso.servicos;
 import com.GustavoLuccaNicolas.bookStore.entidades.Genero;
 import com.GustavoLuccaNicolas.bookStore.entidades.Livro;
 import com.GustavoLuccaNicolas.bookStore.interfaceRemota.RepositorioLivrosImpl;
-import com.GustavoLuccaNicolas.bookStore.interfaceRemota.RepositorioVendasImpl
+import com.GustavoLuccaNicolas.bookStore.interfaceRemota.RepositorioVendasImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
