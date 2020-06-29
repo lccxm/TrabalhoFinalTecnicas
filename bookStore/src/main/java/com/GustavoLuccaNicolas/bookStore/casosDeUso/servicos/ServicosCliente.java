@@ -51,11 +51,13 @@ public class ServicosCliente {
         Map<Genero, Integer> freq = livros.stream().map(Livro::getGenero)
                 .collect(Collectors.toMap(identity(), v -> 1, Integer::sum));
         int maxValueInMap=(Collections.max(freq.values()));
+
         for (Map.Entry<Genero, Integer> entry : freq.entrySet()) {
             if (entry.getValue()==maxValueInMap) {
                 favorito = entry.getKey();
             }
         }
+
         Genero finalFavorito = favorito;
         return bestSellers.stream().filter(livro -> livro.getGenero() == finalFavorito).collect(Collectors.toList());
     }

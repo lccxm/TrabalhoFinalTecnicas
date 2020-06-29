@@ -26,14 +26,6 @@ public class Livro {
         nVendas = 0;
     }
 
-    public int getnVendas(){
-        return nVendas;
-    }
-
-    public void vender(){
-        nVendas++;
-    }
-
     public double getPreco(){
         return preco;
     }
@@ -70,5 +62,12 @@ public class Livro {
         preco = p;
     }
 
+    public int getnVendas(){
+        return nVendas;
+    }
+
+    public void vender(){
+        nVendas++;
+    }
 
 }
