@@ -21,7 +21,7 @@ public class Venda {
         return CupomFactory.getCupom(cupomStr, this).getDesconto();
     }
 
-    public Double getFrete() {
+    public Double getFrete(){
         return Frete.getFrete(cliente.getUf());
     }
 
@@ -29,7 +29,8 @@ public class Venda {
         return this.cliente;
     }
 
-    public String getCupomStr(){ return this.cupomStr; }
+    public String getCupomStr(){
+        return this.cupomStr; }
 
     public List<Livro> getLivros(){ return this.livros; }
 
