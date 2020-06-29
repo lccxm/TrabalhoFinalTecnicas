@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface RepositorioClientesImpl extends CrudRepository<Cliente, Long> {
     List<Cliente> findAll();
-    List<Cliente>  findClienteByCpf(Long cpf);
+    Cliente  findClienteByCpf(Long cpf);
 }
