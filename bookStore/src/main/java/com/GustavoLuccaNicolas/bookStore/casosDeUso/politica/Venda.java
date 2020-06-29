@@ -7,8 +7,16 @@ import java.util.LinkedList;
 import java.util.List;
 import org.springframework.stereotype.Component;
 
-@Component
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Venda {
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private Long id;
     private String cupomStr;
     private Cliente cliente;
     private List<Livro> livros;
