@@ -1,34 +1,36 @@
-package com.GustavoLuccaNicolas.bookStore.casosDeUso.politica;
-
-import com.GustavoLuccaNicolas.bookStore.entidades.Cliente;
-import com.GustavoLuccaNicolas.bookStore.entidades.Livro;
+package com.gustavoluccanicolas.bookstore.models;
 
 import java.util.LinkedList;
 import java.util.List;
-import org.springframework.stereotype.Component;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+
+import com.gustavoluccanicolas.bookstore.casosdeuso.politica.CupomFactory;
+import com.gustavoluccanicolas.bookstore.casosdeuso.politica.Frete;
 
 @Entity
-public class Venda {
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private Long id;
+public class Venda extends EntidadeBase{
+
+
     private String cupomStr;
+
+    @ManyToOne
     private Cliente cliente;
+
+    @ManyToMany
     private List<Livro> livros;
 
-    protected Venda(){}
+    protected Venda() {
+    }
 
     public Venda(Cliente cliente) {
         this.cliente = cliente;
         this.livros = new LinkedList<>();
     }
 
-    public double getDesconto(){
+    public double getDesconto() {
         return CupomFactory.getCupom(cupomStr, this).getDesconto();
     }
 
@@ -40,12 +42,16 @@ public class Venda {
         return this.cliente;
     }
 
-    public String getCupomStr(){ return this.cupomStr; }
+    public String getCupomStr() {
+        return this.cupomStr;
+    }
 
-    public List<Livro> getLivros(){ return this.livros; }
+    public List<Livro> getLivros() {
+        return this.livros;
+    }
 
     public Double getSubTotal() {
-        Double total = 0.00;
+        double total = 0.00;
         for (Livro livro : livros)
             total += livro.getPreco();
         return total;
@@ -55,15 +61,15 @@ public class Venda {
         return this.getSubTotal() - this.getDesconto() + this.getFrete();
     }
 
-    public void addCupom(String cupomStr){
+    public void addCupom(String cupomStr) {
         this.cupomStr = cupomStr;
     }
 
-    public void addLivro(Livro livro){
+    public void addLivro(Livro livro) {
         livros.add(livro);
     }
 
-    public void removeLivro(Livro livro){
+    public void removeLivro(Livro livro) {
         livros.remove(livro);
     }
 }
