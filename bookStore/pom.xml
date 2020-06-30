@@ -11,7 +11,7 @@
 	<groupId>com.gustavoluccanicolas</groupId>
 	<artifactId>bookstore</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>bookStore</name>
+	<name>bookstore</name>
 	<description>Book Store</description>
 
 	<properties>
