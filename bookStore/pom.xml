@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repositories -->
 	</parent>
 	<groupId>com.gustavoluccanicolas</groupId>
-	<artifactId>bookstore</artifactId>
+	<artifactId>bookStore</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>bookstore</name>
+	<name>bookStore</name>
 	<description>Book Store</description>
 
 	<properties>
