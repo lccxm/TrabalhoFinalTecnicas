@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import com.gustavoluccanicolas.bookstore.models.Venda;
 import com.gustavoluccanicolas.bookstore.models.Cliente;
-import com.gustavoluccanicolas.bookstore.models.enums.Genero;
 import com.gustavoluccanicolas.bookstore.models.Livro;
+import com.gustavoluccanicolas.bookstore.models.Venda;
+import com.gustavoluccanicolas.bookstore.models.enums.Genero;
 import com.gustavoluccanicolas.bookstore.repositories.ClienteRepository;
 import com.gustavoluccanicolas.bookstore.repositories.LivroRepository;
 import com.gustavoluccanicolas.bookstore.repositories.VendaRepository;
