@@ -1,4 +1,4 @@
-package com.gustavoluccanicolas.bookstore.casosdeuso.politica;
+package com.gustavoluccanicolas.bookstore.services.utils;
 
 public class Frete {
 

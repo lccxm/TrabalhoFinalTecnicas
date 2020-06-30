@@ -7,9 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
-import com.gustavoluccanicolas.bookstore.casosdeuso.politica.CupomFactory;
-import com.gustavoluccanicolas.bookstore.casosdeuso.politica.Frete;
-
 @Entity
 public class Venda extends EntidadeBase{
 

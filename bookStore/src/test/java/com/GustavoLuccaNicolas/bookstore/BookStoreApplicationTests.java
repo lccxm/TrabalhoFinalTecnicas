@@ -1,4 +1,4 @@
-package com.gustavoluccanicolas.bookStore;
+package com.GustavoLuccaNicolas.bookStore;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

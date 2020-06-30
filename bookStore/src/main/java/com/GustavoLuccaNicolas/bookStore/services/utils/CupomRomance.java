@@ -1,4 +1,4 @@
-package com.gustavoluccanicolas.bookstore.casosdeuso.politica;
+package com.gustavoluccanicolas.bookstore.services.utils;
 
 import com.gustavoluccanicolas.bookstore.models.Livro;
 import com.gustavoluccanicolas.bookstore.models.Venda;
