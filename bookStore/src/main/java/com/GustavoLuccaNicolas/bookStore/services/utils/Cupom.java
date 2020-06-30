@@ -1,6 +1,6 @@
-package com.gustavoluccanicolas.bookstore.services.utils;
+package com.gustavoluccanicolas.bookStore.services.utils;
 
-import com.gustavoluccanicolas.bookstore.models.Venda;
+import com.gustavoluccanicolas.bookStore.models.Venda;
 
 public abstract class Cupom {
     protected Venda venda;

@@ -1,4 +1,4 @@
-package com.gustavoluccanicolas.bookstore.models;
+package com.gustavoluccanicolas.bookStore.models;
 
 import java.io.Serializable;
 

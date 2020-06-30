@@ -1,8 +1,8 @@
-package com.gustavoluccanicolas.bookstore.repositories;
+package com.gustavoluccanicolas.bookStore.repositories;
 
 import java.util.List;
 
-import com.gustavoluccanicolas.bookstore.models.Livro;
+import com.gustavoluccanicolas.bookStore.models.Livro;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
