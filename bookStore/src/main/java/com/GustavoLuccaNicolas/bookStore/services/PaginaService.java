@@ -1,11 +1,5 @@
-package com.GustavoLuccaNicolas.bookStore.casosDeUso.servicos;
+package com.gustavoluccanicolas.bookstore.services;
 
-import com.GustavoLuccaNicolas.bookStore.entidades.Genero;
-import com.GustavoLuccaNicolas.bookStore.entidades.Livro;
-import com.GustavoLuccaNicolas.bookStore.interfaceRemota.RepositorioLivrosImpl;
-import com.GustavoLuccaNicolas.bookStore.interfaceRemota.RepositorioVendasImpl;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,41 +7,48 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.gustavoluccanicolas.bookstore.models.enums.Genero;
+import com.gustavoluccanicolas.bookstore.models.Livro;
+import com.gustavoluccanicolas.bookstore.repositories.LivroRepository;
+import com.gustavoluccanicolas.bookstore.repositories.VendaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 @Service
-public class ServicosPagina {
-    private RepositorioVendasImpl rVendas;
-    private RepositorioLivrosImpl rLivros;
+public class PaginaService {
+    private VendaRepository rVendas;
+    private LivroRepository rLivros;
     private Livro livro;
 
     @Autowired
-    ServicosPagina(RepositorioVendasImpl rVendas, RepositorioLivrosImpl rLivros){
+    PaginaService(VendaRepository rVendas, LivroRepository rLivros) {
         this.rVendas = rVendas;
         this.rLivros = rLivros;
     }
 
-    public List<Livro> pesquisaPorTitulo(String titulo){
+    public List<Livro> pesquisaPorTitulo(String titulo) {
         List<Livro> livros = rLivros.findAll();
         List<Livro> livrosEncontrados = new ArrayList<>();
-        for(Livro l : livros){
-            if(titulo.equalsIgnoreCase(l.getTitulo())){
+        for (Livro l : livros) {
+            if (titulo.equalsIgnoreCase(l.getTitulo())) {
                 livrosEncontrados.add(l);
             }
         }
         return livrosEncontrados;
     }
 
-    public List<Livro> pesquisaPorGenero(Genero genero){
+    public List<Livro> pesquisaPorGenero(Genero genero) {
         List<Livro> livros = rLivros.findAll();
         List<Livro> livrosEncontrados = new ArrayList<Livro>();
-        for(Livro l : livros){
-            if(genero == l.getGenero()){
+        for (Livro l : livros) {
+            if (genero == l.getGenero()) {
                 livrosEncontrados.add(l);
             }
         }
         return livrosEncontrados;
     }
 
-    public List<Livro> getBestSellers(){
+    public List<Livro> getBestSellers() {
         List<Livro> livros = rLivros.findAll();
         List<Livro> listaOrdenada = livros.stream()
                 .sorted(Comparator.comparing(Livro::getnVendas))

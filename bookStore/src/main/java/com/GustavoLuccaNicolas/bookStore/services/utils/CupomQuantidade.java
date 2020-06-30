@@ -1,7 +1,7 @@
-package com.GustavoLuccaNicolas.bookStore.casosDeUso.politica;
+package com.gustavoluccanicolas.bookstore.services.utils;
 
-import com.GustavoLuccaNicolas.bookStore.entidades.Genero;
-import com.GustavoLuccaNicolas.bookStore.entidades.Livro;
+
+import com.gustavoluccanicolas.bookstore.models.Venda;
 
 public class CupomQuantidade extends Cupom {
     private final double DESCONTO = 0.15;

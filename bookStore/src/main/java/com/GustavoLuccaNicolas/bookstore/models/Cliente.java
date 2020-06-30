@@ -1,21 +1,21 @@
-package com.GustavoLuccaNicolas.bookStore.entidades;
+package com.gustavoluccanicolas.bookstore.models;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 @Entity
-public class Cliente {
-    @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+public class Cliente extends EntidadeBase{
+
+    public static final String CPF_REGEXP = "[\\d]{3}\\.?[\\d]{3}\\.?[\\d]{3}\\-?[\\d]{2}";
+    public static final String CPF_REGEXP_EXACT = "^" + CPF_REGEXP + "$";
+
     private String cpf;
     private String nome;
     private String formaPagamento;
     private String endereco;
     private String uf;
 
-    protected Cliente (){}
+    protected Cliente() {
+    }
 
     public Cliente(String cpf, String nome, String formaPagamento, String endereco, String uf) {
         this.cpf = cpf;

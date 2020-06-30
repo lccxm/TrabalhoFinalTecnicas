@@ -1,4 +1,6 @@
-package com.GustavoLuccaNicolas.bookStore.casosDeUso.politica;
+package com.gustavoluccanicolas.bookstore.services.utils;
+
+import com.gustavoluccanicolas.bookstore.models.Venda;
 
 public abstract class Cupom {
     protected Venda venda;

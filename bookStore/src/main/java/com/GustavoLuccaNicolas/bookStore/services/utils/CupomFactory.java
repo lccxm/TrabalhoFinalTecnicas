@@ -1,4 +1,6 @@
-package com.GustavoLuccaNicolas.bookStore.casosDeUso.politica;
+package com.gustavoluccanicolas.bookstore.services.utils;
+
+import com.gustavoluccanicolas.bookstore.models.Venda;
 
 public class CupomFactory {
     public static Cupom getCupom(String cupomStr, Venda venda) {
