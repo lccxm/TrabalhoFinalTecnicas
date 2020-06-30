@@ -1,6 +1,6 @@
-package com.gustavoluccanicolas.bookstore.controllers;
+package com.gustavoluccanicolas.bookStore.controllers;
 
-import com.gustavoluccanicolas.bookstore.repositories.LivroRepository;
+import com.gustavoluccanicolas.bookStore.repositories.LivroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

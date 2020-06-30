@@ -1,10 +1,10 @@
-package com.gustavoluccanicolas.bookstore.models;
+package com.gustavoluccanicolas.bookStore.models;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 
-import com.gustavoluccanicolas.bookstore.models.enums.Genero;
+import com.gustavoluccanicolas.bookStore.models.enums.Genero;
 
 @Entity
 public class Livro extends EntidadeBase {

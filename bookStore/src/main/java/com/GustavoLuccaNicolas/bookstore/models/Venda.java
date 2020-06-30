@@ -1,4 +1,4 @@
-package com.gustavoluccanicolas.bookstore.models;
+package com.gustavoluccanicolas.bookStore.models;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -6,6 +6,9 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+
+import com.gustavoluccanicolas.bookStore.services.utils.CupomFactory;
+import com.gustavoluccanicolas.bookStore.services.utils.Frete;
 
 @Entity
 public class Venda extends EntidadeBase{

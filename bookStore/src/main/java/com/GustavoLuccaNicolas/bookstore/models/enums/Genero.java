@@ -1,4 +1,4 @@
-package com.gustavoluccanicolas.bookstore.models.enums;
+package com.gustavoluccanicolas.bookStore.models.enums;
 
 import java.util.Objects;
 

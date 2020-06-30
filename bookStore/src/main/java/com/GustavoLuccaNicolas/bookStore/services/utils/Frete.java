@@ -1,4 +1,4 @@
-package com.gustavoluccanicolas.bookstore.services.utils;
+package com.gustavoluccanicolas.bookStore.services.utils;
 
 public class Frete {
 
