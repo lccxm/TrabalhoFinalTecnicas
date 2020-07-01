@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="materialize/css/indexStyle.css">
+    <link rel="stylesheet" href="materialize/css/clienteStyle.css">
     <style>
         #profileLogo {
             width: 150px;
@@ -105,10 +105,10 @@
     <div class="container">
     <h5>Detalhes do cliente</h5>
     <div class="row">
-        <p>Nome: <span th:text="${cliente.nome}"></span>
-        <p>CPF: <span th:text="${cliente.cpf}"></span>
-        <p>Endereço: <span th:text="${cliente.endereco}"></span>
-        <p>UF: <span th:text="${cliente.uf}"></span>
+        Nome: <span th:text="${cliente.nome}">.</span>
+        CPF: <span th:text="${cliente.cpf}">.</span>
+        Endereço: <span th:text="${cliente.endereco}">.</span>
+        UF: <span th:text="${cliente.uf}">.</span>
     </div>
 </div>
 
