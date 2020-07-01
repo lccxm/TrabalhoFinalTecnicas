@@ -4,7 +4,6 @@ import com.gustavoluccanicolas.bookstore.models.Livro;
 import com.gustavoluccanicolas.bookstore.models.enums.Genero;
 import com.gustavoluccanicolas.bookstore.repositories.LivroRepository;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -33,10 +32,4 @@ public class IndexController {
         return model.addObject("livros", livro);
     }
 
-    @GetMapping("/")
-    public ModelAndView findBooksByGender(Genero gender){
-        List<Livro> livros = livroRepository.findByGenero(gender.toString());
-        ModelAndView model = new ModelAndView("index");
-        return model.addObject("livros_genero", livros);
-    }
 }
