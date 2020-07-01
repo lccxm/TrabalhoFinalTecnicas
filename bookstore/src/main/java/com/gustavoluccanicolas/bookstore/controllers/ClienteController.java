@@ -1,6 +1,7 @@
 package com.gustavoluccanicolas.bookstore.controllers;
 
 import com.gustavoluccanicolas.bookstore.repositories.ClienteRepository;
+import com.gustavoluccanicolas.bookstore.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +16,7 @@ public class ClienteController {
     private final ClienteRepository clienteRepository;
 
     @Autowired
-    public ClienteController(ClienteRepository clienteRepository) {
+    public ClienteController(ClienteRepository clienteRepository, ClienteService clienteService) {
         this.clienteRepository = clienteRepository;
     }
 
@@ -28,8 +29,14 @@ public class ClienteController {
 
     @GetMapping("/{cpf}")
     public ModelAndView findByCpf(@PathVariable String cpf){
-
         ModelAndView model = new ModelAndView("cliente/cliente");
         return model.addObject("cliente", clienteRepository.findByCpf(cpf));
     }
+
+    @GetMapping("/recomendacoes/{cpf}")
+    public ModelAndView findRecomendacoes(@PathVariable String cpf){
+        ModelAndView model = new ModelAndView("cliente/cliente");
+        return model.addObject("cliente", clienteRepository.findByCpf(cpf));
+    }
+
 }
