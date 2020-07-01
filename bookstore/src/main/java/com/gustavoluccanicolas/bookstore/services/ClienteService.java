@@ -43,16 +43,16 @@ public class ClienteService {
         }
     }
 
-    public Cliente recuperarDadosCliente(Long cpf) {
-        return rClientes.findClienteByCpf(cpf);
+    public Cliente recuperarDadosCliente(String cpf) {
+        return rClientes.findByCpf(cpf);
     }
 
     public List<Venda> recuperarComprasPassadas(Cliente cliente) {
         return rVendas.findAllByCliente(cliente);
     }
 
-    public List<Livro> recuperarRecomendacoes(Long cpf) {
-        Cliente cliente = rClientes.findClienteByCpf(cpf);
+    public List<Livro> recuperarRecomendacoes(String cpf) {
+        Cliente cliente = rClientes.findByCpf(cpf);
         List<Livro> bestSellers = serv.getBestSellers();
         Genero favorito = null;
         List<Livro> livros = rVendas.findAllByCliente(cliente).stream()
