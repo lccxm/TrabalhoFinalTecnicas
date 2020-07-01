@@ -32,4 +32,11 @@ public class IndexController {
         ModelAndView model = new ModelAndView("index");
         return model.addObject("livros", livro);
     }
+
+    @GetMapping("/")
+    public ModelAndView findBooksByGender(Genero gender){
+        List<Livro> livros = livroRepository.findByGenero(gender.toString());
+        ModelAndView model = new ModelAndView("index");
+        return model.addObject("livros_genero", livros);
+    }
 }
