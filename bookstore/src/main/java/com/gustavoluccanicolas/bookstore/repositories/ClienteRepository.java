@@ -11,5 +11,5 @@ public interface ClienteRepository extends CrudRepository<Cliente, Long> {
 
     List<Cliente> findAll();
 
-    Cliente findClienteByCpf(Long cpf);
+    Cliente findByCpf(String cpf);
 }

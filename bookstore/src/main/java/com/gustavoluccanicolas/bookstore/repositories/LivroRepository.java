@@ -1,6 +1,7 @@
 package com.gustavoluccanicolas.bookstore.repositories;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.gustavoluccanicolas.bookstore.models.Livro;
 import org.springframework.data.repository.CrudRepository;
@@ -11,7 +12,7 @@ public interface LivroRepository extends CrudRepository<Livro, Long> {
 
     List<Livro> findAll();
 
-    Livro findLivroById(Long id);
+    Optional<Livro> findById(Long id);
 
-    List<Livro> findByGender(String gender);
+    List<Livro> findByGenero(String gender);
 }
