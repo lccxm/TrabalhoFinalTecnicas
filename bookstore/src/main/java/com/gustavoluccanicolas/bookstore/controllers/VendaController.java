@@ -29,6 +29,14 @@ public class VendaController {
         this.clienteRepository = clienteRepository;
     }
 
+    @GetMapping("/")
+    public ModelAndView findAll(){
+        Iterable<Venda> vendas = vendaRepository.findAll();
+        ModelAndView model = new ModelAndView("cliente/vendas");
+        model.addObject("vendas", vendas);
+        return model;
+    }
+
     @GetMapping("/{cpf}")
     public ModelAndView findAllByCliente(@PathVariable String cpf){
         Iterable<Venda> vendas = vendaRepository.findAllByCliente(clienteRepository.findByCpf(cpf));

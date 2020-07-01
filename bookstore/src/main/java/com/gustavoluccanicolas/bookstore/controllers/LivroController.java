@@ -36,28 +36,28 @@ public class LivroController {
     public ModelAndView findByGender(@PathVariable Genero genero){
         List<Livro> livros = livroRepository.findByGenero(genero.toString());
         ModelAndView model = new ModelAndView();
-        return model.addObject("Livros por Genero", livros);
+        return model.addObject("bookGender", livros);
     }
 
     @GetMapping("/{id}")
     public ModelAndView findById(@PathVariable Long id){
         Optional<Livro> livro = livroRepository.findById(id);
         ModelAndView model = new ModelAndView();
-        return model.addObject("Livro por id", livro);
+        return model.addObject("bookId", livro);
     }
 
     @GetMapping("/{title}")
     public ModelAndView findByTitle(@PathVariable String title){
         Livro livro = livroRepository.findLivroByTitulo(title);
         ModelAndView model = new ModelAndView();
-        return model.addObject("livro por titulo", livro);
+        return model.addObject("bookTitle", livro);
     }
 
     @GetMapping("/{author}")
     public ModelAndView findByAuthor(@PathVariable String author){
         List<Livro> livros = livroRepository.findAllByAutor(author);
         ModelAndView model = new ModelAndView();
-        return model.addObject("livros por autor", livros);
+        return model.addObject("bookAuthor", livros);
     }
 }
 
