@@ -28,7 +28,8 @@ public class LivroController {
     @GetMapping
     public ModelAndView findAllBooks(){
         List<Livro> livro = livroRepository.findAll();
-        ModelAndView model = new ModelAndView();
+        ModelAndView model = new ModelAndView("index");
+        System.out.println(livro);
         return model.addObject("livros", livro);
     }
 
