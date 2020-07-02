@@ -15,9 +15,9 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
-@RequestMapping("livros")
 public class LivroController {
 
+    @Autowired
     private final LivroRepository livroRepository;
 
     @Autowired
@@ -25,7 +25,7 @@ public class LivroController {
         this.livroRepository = livroRepository;
     }
 
-    @GetMapping
+    @GetMapping("/livros")
     public ModelAndView findAllBooks(){
         List<Livro> livro = livroRepository.findAll();
         ModelAndView model = new ModelAndView("index");
@@ -60,5 +60,6 @@ public class LivroController {
         ModelAndView model = new ModelAndView();
         return model.addObject("bookAuthor", livros);
     }
+
 }
 
