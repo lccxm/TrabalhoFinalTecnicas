@@ -1,18 +1,15 @@
-package com.gustavoluccanicolas.bookstore.controllers;
+package com.gustavoluccanicolas.bookstore.interfaces;
 
-import com.gustavoluccanicolas.bookstore.models.Livro;
-import com.gustavoluccanicolas.bookstore.models.enums.Genero;
-import com.gustavoluccanicolas.bookstore.repositories.LivroRepository;
+import com.gustavoluccanicolas.bookstore.entidades.Livro;
+import com.gustavoluccanicolas.bookstore.entidades.enums.Genero;
+import com.gustavoluccanicolas.bookstore.casosdeuso.repositories.LivroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
-import java.util.Optional;
 
 @Controller
 public class LivroController {

@@ -1,12 +1,11 @@
-package com.gustavoluccanicolas.bookstore.controllers;
+package com.gustavoluccanicolas.bookstore.interfaces;
 
-import com.gustavoluccanicolas.bookstore.repositories.ClienteRepository;
-import com.gustavoluccanicolas.bookstore.services.ClienteService;
+import com.gustavoluccanicolas.bookstore.casosdeuso.repositories.ClienteRepository;
+import com.gustavoluccanicolas.bookstore.casosdeuso.repositories.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 

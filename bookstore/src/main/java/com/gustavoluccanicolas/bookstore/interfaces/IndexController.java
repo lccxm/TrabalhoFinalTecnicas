@@ -1,18 +1,15 @@
-package com.gustavoluccanicolas.bookstore.controllers;
+package com.gustavoluccanicolas.bookstore.interfaces;
 
-import com.gustavoluccanicolas.bookstore.models.Carrinho;
-import com.gustavoluccanicolas.bookstore.models.Cliente;
-import com.gustavoluccanicolas.bookstore.models.Livro;
-import com.gustavoluccanicolas.bookstore.repositories.ClienteRepository;
-import com.gustavoluccanicolas.bookstore.repositories.LivroRepository;
-import com.gustavoluccanicolas.bookstore.services.PaginaService;
+import com.gustavoluccanicolas.bookstore.entidades.Cliente;
+import com.gustavoluccanicolas.bookstore.entidades.Livro;
+import com.gustavoluccanicolas.bookstore.casosdeuso.repositories.ClienteRepository;
+import com.gustavoluccanicolas.bookstore.casosdeuso.repositories.LivroRepository;
+import com.gustavoluccanicolas.bookstore.casosdeuso.repositories.services.PaginaService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.swing.text.LabelView;
 import java.util.List;
 
 @Controller

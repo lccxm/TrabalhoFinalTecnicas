@@ -1,9 +1,9 @@
-package com.gustavoluccanicolas.bookstore.repositories;
+package com.gustavoluccanicolas.bookstore.casosdeuso.repositories;
 
 import java.util.List;
 
-import com.gustavoluccanicolas.bookstore.models.Venda;
-import com.gustavoluccanicolas.bookstore.models.Cliente;
+import com.gustavoluccanicolas.bookstore.entidades.Venda;
+import com.gustavoluccanicolas.bookstore.entidades.Cliente;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
