@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -22,6 +23,7 @@ public class VendaController {
 
     private final VendaRepository vendaRepository;
     private final ClienteRepository clienteRepository;
+
 
     @Autowired
     public VendaController(VendaRepository vendaRepository, ClienteRepository clienteRepository) {
@@ -44,5 +46,14 @@ public class VendaController {
         model.addObject("vendas", vendas);
         return model;
     }
+
+//    @PostMapping("/{cpf}/cart/{id}")
+//    public void addCart(){
+//        List<Livro> carrinho = new ArrayList<>();
+//        carrinho.add(livro);
+//    }
+
+
+
 
 }
