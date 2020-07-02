@@ -14,6 +14,8 @@ public interface LivroRepository extends CrudRepository<Livro, Long> {
 
     Optional<Livro> findById(Long id);
 
+    Livro findLivroById(Long id);
+
     List<Livro> findByGenero(String gender);
 
     Livro findLivroByTitulo(String title);

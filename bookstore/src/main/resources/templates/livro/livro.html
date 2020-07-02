@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="materialize/css/indexStyle.css">
+    <style>
+        #profileLogo {
+            width: 150px;
+            margin-left: calc(50% - 75px);
+            margin-top: 3em;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="mb-1 navbar navbar-expand-lg" style="z-index: 999;">
+        <a class="navbar-brand" href="#"><img width="30px" src="https://image.flaticon.com/icons/svg/646/646434.svg"
+                                              alt="" srcset=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/livros">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../clientes/7">Perfil</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light">
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="profileContainer">
+    <img id="profileLogo" src="https://rosieshouse.org/wp-content/uploads/2016/06/avatar-large-square.jpg"
+         width="150px" alt="" srcset="">
+
+</div>
+<ul class="list-group">
+    <li class="list-group-item">ID: <span th:text="${livro.getId()}">.</span></li>
+    <li class="list-group-item">Titulo: <span th:text="${livro.getTitulo()}">.</span></li>
+    <li class="list-group-item">Autor: <span th:text="${livro.getAutor()}">.</span></li>
+    <li class="list-group-item">Descrição: <span th:text="${livro.getDescricao()}">.</span></li>
+    <li class="list-group-item">Genero: <span th:text="${livro.getGenero()}">.</span></li>
+    <li class="list-group-item">Preço: <span th:text="${livro.getPreco()}">.</span></li>
+</ul>
+
+
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
+
+</body>
+
+</html>
