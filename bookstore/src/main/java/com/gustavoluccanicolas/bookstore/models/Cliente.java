@@ -1,6 +1,7 @@
 package com.gustavoluccanicolas.bookstore.models;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Cliente extends EntidadeBase{
@@ -13,6 +14,7 @@ public class Cliente extends EntidadeBase{
     private String formaPagamento;
     private String endereco;
     private String uf;
+    @OneToOne
     private Carrinho carrinho;
 
     protected Cliente() {
@@ -24,7 +26,7 @@ public class Cliente extends EntidadeBase{
         this.formaPagamento = formaPagamento;
         this.endereco = endereco;
         this.uf = uf;
-        carrinho = new Carrinho(this);
+        carrinho = new Carrinho();
     }
 
     public String getCpf() {
