@@ -96,11 +96,14 @@
                 </div>
             </div>
         </section>
-        <div class="card w-75 mb-3">
+        <div class="card w-75 mb-3" id="card-carrinho">
             <div class="card-body">
                 <h5 class="card-title">Carrinho</h5>
-
-                <a href="#!" class="btn btn-primary">Button</a>
+                <tr th:each="item : ${carrinho}">
+                    <td><span th:text="${item.titulo}"></span></td>
+                    <td><span th:text="${carrinho.getTotal}"></span></td>
+                </tr>
+                <a href="#!" class="btn btn-primary">COMPRAR</a>
             </div>
         </div>
     </div>
