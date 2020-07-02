@@ -115,7 +115,13 @@
                                 <td><span th:text="${livro.titulo}"></span></td>
                                 <td><span th:text="${livro.descricao}"></span></td>
                                 <td><span th:text="${livro.genero}"></span></td>
-                                <td><span class="material-icons">shopping_cart</span></td>
+                                <td>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="materialUnchecked">
+                                        <label class="form-check-label" for="materialUnchecked">Material
+                                            unchecked</label>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
