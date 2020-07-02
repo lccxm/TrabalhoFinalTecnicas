@@ -37,3 +37,7 @@ nav a:hover{
 .container section{
     display: block;
 }
+
+#card-carrinho{
+    margin-top: 5%
+}

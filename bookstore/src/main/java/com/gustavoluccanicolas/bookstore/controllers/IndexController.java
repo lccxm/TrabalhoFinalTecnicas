@@ -28,18 +28,17 @@ public class IndexController {
         this.clienteRepository = clienteRepository;
     }
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public String index(){
         return "index";
     }
-
 
     @PostMapping
     public void addLivroCarrinho(Cliente cliente, Livro livro){
         cliente.getCarrinho().addLivro(livro);
     }
 
-    @GetMapping("/")
+    @PostMapping("/1")
     public ModelAndView getCarrinho(Cliente cliente){
         List<Livro> livros = cliente.getCarrinho().getLivros();
         ModelAndView model = new ModelAndView();

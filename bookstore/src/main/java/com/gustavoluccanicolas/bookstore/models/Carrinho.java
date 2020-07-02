@@ -13,9 +13,6 @@ public class Carrinho extends EntidadeBase {
 
     @OneToMany
     private List<Livro> livros;
-
-
-
     private double total;
 
     protected Carrinho(){
