@@ -13,6 +13,7 @@ public class Cliente extends EntidadeBase{
     private String formaPagamento;
     private String endereco;
     private String uf;
+    private Carrinho carrinho;
 
     protected Cliente() {
     }
@@ -23,6 +24,7 @@ public class Cliente extends EntidadeBase{
         this.formaPagamento = formaPagamento;
         this.endereco = endereco;
         this.uf = uf;
+        carrinho = new Carrinho(this);
     }
 
     public String getCpf() {
@@ -43,5 +45,9 @@ public class Cliente extends EntidadeBase{
 
     public String getUf() {
         return this.uf;
+    }
+
+    public Carrinho getCarrinho(){
+        return carrinho;
     }
 }
