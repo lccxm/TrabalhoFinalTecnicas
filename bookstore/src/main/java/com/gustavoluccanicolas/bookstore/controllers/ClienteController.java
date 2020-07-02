@@ -15,10 +15,12 @@ import org.springframework.web.servlet.ModelAndView;
 public class ClienteController {
 
     private final ClienteRepository clienteRepository;
+    private final ClienteService clienteService;
 
     @Autowired
     public ClienteController(ClienteRepository clienteRepository, ClienteService clienteService) {
         this.clienteRepository = clienteRepository;
+        this.clienteService = clienteService;
     }
 
     @GetMapping
@@ -36,8 +38,8 @@ public class ClienteController {
 
     @GetMapping("/recomendacoes/{cpf}")
     public ModelAndView findRecomendacoes(@PathVariable String cpf){
-        ModelAndView model = new ModelAndView("cliente/cliente");
-        return model.addObject("cliente", clienteRepository.findByCpf(cpf));
+        ModelAndView model = new ModelAndView("cliente/recomendacoes");
+        return model.addObject("livros", clienteService.recuperarRecomendacoes(cpf));
     }
 
 }

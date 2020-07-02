@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Eventos App</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="materialize/css/indexStyle.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div>
+                <a href="#" class="brand-logo">Vendas Realizadas</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/clientes/recomendacoes/{cpf}" class="waves-effect waves-light btn"><i
+                                class="material-icons left">format_list_bulleted</i>Eventos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <table class="container">
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Preço</th>
+                <th>Genero</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="livro : ${livros}">
+                <td><span th:text="${livro.getTitulo()}"></span></td>
+                <td><span th:text="${livro.getPreco()}"></span></td>
+                <td><span th:text="${livro.getGenero()}"></span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    </div>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="/materialize/js/materialize.min.js"></script>
+
+</body>
+
+</html>
