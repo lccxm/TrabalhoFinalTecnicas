@@ -1,9 +1,7 @@
-package com.gustavoluccanicolas.bookstore.models;
+package com.gustavoluccanicolas.bookstore.entidades;
 
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;

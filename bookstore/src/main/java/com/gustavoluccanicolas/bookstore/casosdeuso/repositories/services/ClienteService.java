@@ -1,17 +1,17 @@
-package com.gustavoluccanicolas.bookstore.services;
+package com.gustavoluccanicolas.bookstore.casosdeuso.repositories.services;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import com.gustavoluccanicolas.bookstore.models.Cliente;
-import com.gustavoluccanicolas.bookstore.models.Livro;
-import com.gustavoluccanicolas.bookstore.models.Venda;
-import com.gustavoluccanicolas.bookstore.models.enums.Genero;
-import com.gustavoluccanicolas.bookstore.repositories.ClienteRepository;
-import com.gustavoluccanicolas.bookstore.repositories.LivroRepository;
-import com.gustavoluccanicolas.bookstore.repositories.VendaRepository;
+import com.gustavoluccanicolas.bookstore.entidades.Cliente;
+import com.gustavoluccanicolas.bookstore.entidades.Livro;
+import com.gustavoluccanicolas.bookstore.entidades.Venda;
+import com.gustavoluccanicolas.bookstore.entidades.enums.Genero;
+import com.gustavoluccanicolas.bookstore.casosdeuso.repositories.ClienteRepository;
+import com.gustavoluccanicolas.bookstore.casosdeuso.repositories.LivroRepository;
+import com.gustavoluccanicolas.bookstore.casosdeuso.repositories.VendaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import static java.util.function.Function.identity;

@@ -1,6 +1,6 @@
-package com.gustavoluccanicolas.bookstore.services.utils;
+package com.gustavoluccanicolas.bookstore.casosdeuso.repositories.services.utils;
 
-import com.gustavoluccanicolas.bookstore.models.Venda;
+import com.gustavoluccanicolas.bookstore.entidades.Venda;
 
 public class CupomQuantidade extends Cupom {
     private final double DESCONTO = 0.15;

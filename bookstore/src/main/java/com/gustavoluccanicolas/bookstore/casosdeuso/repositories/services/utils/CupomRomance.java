@@ -1,8 +1,8 @@
-package com.gustavoluccanicolas.bookstore.services.utils;
+package com.gustavoluccanicolas.bookstore.casosdeuso.repositories.services.utils;
 
-import com.gustavoluccanicolas.bookstore.models.Livro;
-import com.gustavoluccanicolas.bookstore.models.Venda;
-import com.gustavoluccanicolas.bookstore.models.enums.Genero;
+import com.gustavoluccanicolas.bookstore.entidades.Livro;
+import com.gustavoluccanicolas.bookstore.entidades.Venda;
+import com.gustavoluccanicolas.bookstore.entidades.enums.Genero;
 
 public class CupomRomance extends Cupom {
     private final double DESCONTO = 0.10;
